@@ -1,0 +1,69 @@
+﻿@model WRTC2026_Log.Models.Logbook
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Logbook</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Frequency" class="control-label"></label>
+                <input asp-for="Frequency" class="form-control" />
+                <span asp-validation-for="Frequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mode" class="control-label"></label>
+                <input asp-for="Mode" class="form-control" />
+                <span asp-validation-for="Mode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Power" class="control-label"></label>
+                <input asp-for="Power" class="form-control" />
+                <span asp-validation-for="Power" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Callsign" class="control-label"></label>
+                <input asp-for="Callsign" class="form-control" />
+                <span asp-validation-for="Callsign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReportSent" class="control-label"></label>
+                <input asp-for="ReportSent" class="form-control" />
+                <span asp-validation-for="ReportSent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReportReceived" class="control-label"></label>
+                <input asp-for="ReportReceived" class="form-control" />
+                <span asp-validation-for="ReportReceived" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
