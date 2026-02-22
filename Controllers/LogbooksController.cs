@@ -12,6 +12,8 @@ namespace WRTC2026_Log.Controllers
 {
     public class LogbooksController : Controller
     {
+        public int entryCount = 0;
+
         private readonly WRTC2026_LogContext _context;
 
         public LogbooksController(WRTC2026_LogContext context)
@@ -62,6 +64,7 @@ namespace WRTC2026_Log.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            entryCount++;
             return View(logbook);
         }
 

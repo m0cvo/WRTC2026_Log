@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="WRTC2026_Log.csproj" />
+  <Project Path="WRTC26_Logger/WRTC26_Logger.csproj" Id="f9a5c1e6-baba-414d-a193-cd305d0a9e4f" />
 </Solution>
